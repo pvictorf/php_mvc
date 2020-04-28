@@ -2,7 +2,7 @@
 namespace src;
 
 class Config {
-    const BASE_DIR = '/var/www/html/public';
+    const BASE_DIR = '/public';
 
     const DB_DRIVER = 'mysql';
     const DB_HOST = 'mysql';
