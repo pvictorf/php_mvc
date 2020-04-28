@@ -1,3 +1,5 @@
 <?=  $render('header'); ?>
 
-Opa, <?=$nome;?>
+<a href="<?=$base;?>/novo">Novo Usuário</a>
+
+<?=  $render('footer'); ?>
