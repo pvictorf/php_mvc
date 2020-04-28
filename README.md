@@ -7,5 +7,5 @@ Após configurar o src/Config.php. Você deve acessar a pasta *public* do projet
 
 O ideal é criar um ***alias*** específico no servidor que direcione diretamente para a pasta *public*.
 
-#Intalando
+## Instalando
 Entre no diretório raiz do projeto via terminal e rode o comando "composer install"
