@@ -1,6 +1,7 @@
 <?php
 namespace core;
 
+use Exception;
 use \src\Config;
 
 class RouterBase {
@@ -57,7 +58,11 @@ class RouterBase {
         $controller = "\src\controllers\\$controller";
         $definedController = new $controller();
 
-        $definedController->$action($args);
+        try{
+            $definedController->$action($args);
+        } catch(Exception $e) {
+            var_dump($e);
+        }
     }
-    
+
 }
