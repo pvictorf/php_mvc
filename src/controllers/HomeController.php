@@ -9,8 +9,8 @@ class HomeController extends Controller {
         $this->render('home', ['nome' => 'Victor']);
     }
 
-    public function sobre() {
-        $json = ['nome' => 'Victor']
+    public function sobre($req) {
+        $json = [ 'nome' => $req['nome'] ];
         
         $this->response_json($json);
     }
