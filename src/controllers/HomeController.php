@@ -10,11 +10,10 @@ class HomeController extends Controller {
     }
 
     public function sobre() {
-        $this->render('sobre');
+        $json = ['nome' => 'Victor']
+        
+        $this->response_json($json);
     }
 
-    public function sobreP($args) {
-        print_r($args);
-    }
 
 }
