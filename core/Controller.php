@@ -2,6 +2,7 @@
 namespace core;
 
 use \src\Config;
+use stdClass;
 
 class Controller {
 
@@ -17,7 +18,7 @@ class Controller {
             $base .= ':'.$_SERVER['SERVER_PORT'];
         }
         $base .= Config::BASE_DIR;
-        
+
         return $base;
     }
 
@@ -42,10 +43,11 @@ class Controller {
         $this->_render('pages', $viewName, $viewData);
     }
 
-    public function response_json($json, $status = 200) {
+    public function response_json($params = [], $status = 200) {
         header('content-type: application/json; charset=utf-8');
         http_response_code($status);
-        echo json_encode($json, JSON_UNESCAPED_UNICODE);
+
+        echo json_encode($params, JSON_UNESCAPED_UNICODE);
         exit;
     }
 
