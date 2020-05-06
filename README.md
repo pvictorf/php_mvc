@@ -11,6 +11,28 @@
 
 }
 ```
+- Enviar respostas em JSON
+```php
+class ClienteController extends Controller {
+  public function index() {
+
+        $clientes = Cliente::select()->select();
+
+        $this->response_json($clientes);
+  }
+}
+```
+Neste caso a resposta será:
+```json
+{
+  "id": "1",
+  "nome": "Paulo Victor",
+  "email": "pvi@hotmail.com",
+  "celular": "6590000000",
+  "senha": "",
+  "criado_em": "2020-05-06 08:49:12",
+}
+```
 
 ## Uso
 Após configurar o src/Config.php. Você deve acessar a pasta *public* do projeto.
