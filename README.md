@@ -16,9 +16,9 @@
 class ClienteController extends Controller {
   public function index() {
 
-        $clientes = Cliente::select()->one();
+        $cliente = Cliente::select()->one();
 
-        $this->response_json($clientes);
+        $this->response_json($cliente);
   }
 }
 ```
