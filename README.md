@@ -5,9 +5,9 @@
  - Criação de model precisará do atributo $table que fará referência ao seu banco de dados, exatamente como Eloquent em Laravel: https://laravel.com/docs/5.0/eloquent#basic-usage
  
  ```php
- class User extends Model {
+ class Cliente extends Model {
 
-    protected $table = 'my_users';
+    protected $table = 'clientes';
 
 }
 ```
