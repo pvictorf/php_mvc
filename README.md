@@ -7,7 +7,7 @@
  ```php
  class Cliente extends Model {
 
-    protected $table = 'clientes';
+    protected static $table = 'clientes';
 
 }
 ```
